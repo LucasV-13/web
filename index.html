@@ -7,36 +7,375 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Porte Folio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <title>Lucas VINTENON - Portfolio</title>
 </head>
 <body>
-    
-    <section class="apropos">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">LV</div>
+            <div class="nav-links">
+                <a href="#accueil" class="nav-link">Accueil</a>
+                <a href="#projets" class="nav-link">Projets</a>
+                <a href="#competences" class="nav-link">Compétences</a>
+                <a href="#parcours" class="nav-link">Parcours</a>
+                <a href="Doc/CV VINTENON Lucas.pdf" download="CV VINTENON Lucas" target="_blank" class="cv-button">
+                    Télécharger CV
+                </a>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
         <div class="main">
-            <img src="Img/photo2.png">
-            <div class="texte-apropos">
-                <h1>Lucas VINTENON</h1>
+            <img src="Img/photo2.png" alt="Lucas VINTENON" class="profile-image">
+            <div class="hero-content">
+                <h1>Lucas <span>VINTENON</span></h1>
                 <h5>Étudiant <span>& Développeur Junior</span></h5>
                 <p>Actuellement étudiant en BTS Informatique
                      et je développe une forte passion pour le développement web.
-                     Toujours curieux d'apprendre de nouvelles technologies.L'objectif
-                      est de devenir un développeur accompli et de pouvoir
-                       contribuer à des projets stimulants.</p>
+                     Toujours curieux d'apprendre de nouvelles technologies.
+                     L'objectif est de devenir un développeur accompli et de pouvoir
+                     contribuer à des projets stimulants.</p>
 
-                     <div class="boutton-groupe">
-                        <a href="tel:+33660441545">
-                            <button type="button">Téléphone</button>
-                        </a>
-                        <a href="mailto:lvintenon@gmail.com">
-                            <button type="button">Mail</button>
-                        </a>
-                        <a href="Doc/CV VINTENON Lucas.pdf" download="CV VINTENON Lucas" target="_blank">
-                            <button type="button">Télécharger CV</button>
-                        </a>
-                     </div>
+                <div class="button-group">
+                    <a href="tel:+33660441545">
+                        <button type="button">Téléphone</button>
+                    </a>
+                    <a href="mailto:lvintenon@gmail.com">
+                        <button type="button">Mail</button>
+                    </a>
+                    <a href="Doc/CV VINTENON Lucas.pdf" download="CV VINTENON Lucas" target="_blank">
+                        <button type="button">Télécharger CV</button>
+                    </a>
+                </div>
+                <div class="scroll-indicator">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="scroll-arrow" viewBox="0 0 24 24">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                    </svg>
+                </div>
             </div>
-
         </div>
     </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="section-container">
+        <h2 class="section-title">Mes Projets</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Développement Web</h3>
+                <p>Création de sites web responsive avec HTML, CSS et JavaScript</p>
+                <div class="tags">
+                    <span class="tag html">HTML</span>
+                    <span class="tag css">CSS</span>
+                    <span class="tag js">JavaScript</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Applications Mobiles</h3>
+                <p>Développement d'applications mobiles Android avec Java</p>
+                <div class="tags">
+                    <span class="tag java">Java</span>
+                    <span class="tag android">Android</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Base de Données</h3>
+                <p>Conception et gestion de bases de données relationnelles</p>
+                <div class="tags">
+                    <span class="tag sql">SQL</span>
+                    <span class="tag mysql">MySQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="section-container">
+        <h2 class="section-title">Compétences</h2>
+        <div class="skills-container">
+            <!-- Langages de programmation -->
+            <div class="skill-category">
+                <h3>Langages</h3>
+                <div class="skill-list">
+                    <div class="skill">
+                        <div class="skill-name">HTML</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">CSS</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">PHP</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Frameworks et outils -->
+            <div class="skill-category">
+                <h3>Frameworks & Outils</h3>
+                <div class="skill-list">
+                    <div class="skill">
+                        <div class="skill-name">Bootstrap</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Git</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">MySQL</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">VS Code</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Soft Skills -->
+            <div class="skill-category">
+                <h3>Soft Skills</h3>
+                <div class="skill-list">
+                    <div class="skill">
+                        <div class="skill-name">Travail d'équipe</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Résolution de problèmes</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Communication</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Autonomie</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Parcours -->
+    <section id="parcours" class="section-container">
+        <h2 class="section-title">Parcours</h2>
+        <div class="timeline">
+            <!-- Formation -->
+            <div class="timeline-section">
+                <h3>Formation</h3>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023 - Présent</div>
+                    <div class="timeline-content">
+                        <h4>BTS Services Informatiques aux Organisations</h4>
+                        <p>Option Développement d'Applications</p>
+                        <p class="timeline-location">Lycée XYZ, Ville</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2020 - 2023</div>
+                    <div class="timeline-content">
+                        <h4>Baccalauréat Général</h4>
+                        <p>Spécialités Mathématiques et NSI</p>
+                        <p class="timeline-location">Lycée ABC, Ville</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Expérience professionnelle -->
+            <div class="timeline-section">
+                <h3>Expérience</h3>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Été 2023</div>
+                    <div class="timeline-content">
+                        <h4>Stage Développeur Web</h4>
+                        <p>Développement frontend et intégration de maquettes</p>
+                        <p class="timeline-location">Entreprise XYZ, Ville</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h4>Projet Étudiant</h4>
+                        <p>Création d'une application web de gestion de tâches</p>
+                        <p class="timeline-location">Projet universitaire</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-socials">
+                <a href="https://linkedin.com/" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://github.com/" target="_blank" class="social-link">GitHub</a>
+                <a href="https://twitter.com/" target="_blank" class="social-link">Twitter</a>
+            </div>
+            <div class="footer-contact">
+                <a href="tel:+33660441545">+33 6 60 44 15 45</a>
+                <a href="mailto:lvintenon@gmail.com">lvintenon@gmail.com</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 Lucas VINTENON. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Menu mobile toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu after clicking
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+                
+                // Scroll to section
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // GSAP Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Register ScrollTrigger
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Hero section animations
+            gsap.from('.hero h1', {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                delay: 0.2
+            });
+            
+            gsap.from('.hero h5', {
+                opacity: 0,
+                y: 30,
+                duration: 1,
+                delay: 0.4
+            });
+            
+            gsap.from('.hero p', {
+                opacity: 0,
+                y: 20,
+                duration: 1,
+                delay: 0.6
+            });
+            
+            gsap.from('.button-group', {
+                opacity: 0,
+                y: 20,
+                duration: 1,
+                delay: 0.8
+            });
+            
+            // Scroll animations for sections
+            gsap.utils.toArray('.section-container').forEach(section => {
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 1
+                });
+            });
+            
+            // Project cards staggered animation
+            gsap.from('.project-card', {
+                scrollTrigger: {
+                    trigger: '.projects-grid',
+                    start: "top 80%"
+                },
+                opacity: 0,
+                y: 30,
+                stagger: 0.2,
+                duration: 0.8
+            });
+            
+            // Skills animation
+            gsap.from('.skill-level', {
+                scrollTrigger: {
+                    trigger: '.skills-container',
+                    start: "top 80%"
+                },
+                width: 0,
+                duration: 1.5,
+                stagger: 0.1,
+                ease: "power2.out"
+            });
+            
+            // Timeline animation
+            gsap.from('.timeline-item', {
+                scrollTrigger: {
+                    trigger: '.timeline',
+                    start: "top 80%"
+                },
+                opacity: 0,
+                x: -50,
+                stagger: 0.2,
+                duration: 0.8
+            });
+        });
+    </script>
 </body>
 </html>
